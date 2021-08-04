@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+body {
+    margin: 0;
+    background: #A6DBFF;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#title-logo {
+    max-width: 640px;
+}
+
+.overlay-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #FFFFFF;
+    font-family: 'Bradley Hand', cursive;
+}
+
+.overlay-screen.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-fade 500ms forwards;
+}
+
+.splash-screen {
+    transform: scale(0.1, 0.1);
+    animation: overlay-grow 500ms forwards;
+    animation-delay: 1s;
+}
+
+@keyframes overlay-fade {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, .9);
+    }
+}
+
+@keyframes overlay-grow {
+    from {
+        transform: scale(0.1, 0.1);
+    }
+
+    to {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+.main-container {
+    display: flex;
+}
+
+.player-list {
+    width: 175px; 
+    padding: 0px 30px 30px 30px;
+}
+
+.map-container {
+    position: relative;
+    border: 5px solid;
+    max-width: calc(100% - 175px);
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.player {
+    display: flex;
+    margin-top: 20px;
+    width: 175px;
+    height: 75px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.player-crest {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px 0px 0px 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crest-img {
+    height: 60px;
+    width: 60px;
+}
+
+.player-info {
+    background: #FFFFFF;
+    width: calc(100% - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 50px;
+}
